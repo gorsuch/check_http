@@ -1,16 +1,23 @@
 module CheckHTTP
   class CLI
+    def perform(url)
+      result = CheckHTTP.check(url.strip)
+      puts KV.unparse(result)
+    end
+
     def run
       opts = {}
       ARGV.options do |o|
-        o.banner = 'Usage: check_http <url>'
+        o.banner = 'Usage: check_http [url]'
         o.parse!
-        url = ARGV.shift
 
-        abort("Error: url not provided.\n\n#{o}") unless url
-
-        result = CheckHTTP.check(url)
-        puts KV.unparse(result)
+        if url = ARGV.shift
+          perform(url)
+        else
+          ARGF.each_line do |url|
+            perform(url)
+          end
+        end       
       end            
     end
   end
