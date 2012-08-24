@@ -28,7 +28,7 @@ $ check_http http://www.github.com
 You can also stream urls into it:
 
 ```bash
-$ cat list_or_urls.txt | check_http
+$ cat list_of_urls.txt | check_http
 ```
 
 ### Via the lib:
