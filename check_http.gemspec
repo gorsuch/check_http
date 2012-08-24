@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.version       = CheckHTTP::VERSION
   gem.authors       = ["Michael Gorsuch"]
   gem.email         = ["michael.gorsuch@gmail.com"]
-  gem.description   = %q{a simple interface to gather curl stats on an HTTP resource}
+  gem.description   = %q{a simple interface to gather curl stats against an HTTP resource}
   gem.summary       = gem.description
   gem.homepage      = "https://github.com/gorsuch/check_http"
 
