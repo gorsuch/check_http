@@ -5,6 +5,7 @@ module CheckHTTP
     def perform(url)
       result = CheckHTTP.check(url.strip)
       puts KV.unparse(result)
+      STDOUT.flush
     end
 
     def run
