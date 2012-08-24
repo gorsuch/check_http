@@ -18,14 +18,20 @@ Or install it yourself as:
 
 ## Usage
 
-Via the command line:
+### Via the command line:
 
 ```bash
 $ check_http http://www.github.com
 # return_code=ok total_time=0.209625 connect_time=0.111266 namelookup_time=0.028197 effective_url=http://www.github.com primary_ip=207.97.227.243 response_code=301 redirect_count=0 url=http://www.github.com
 ```
 
-Via the lib:
+You can also stream urls into it:
+
+```bash
+$ cat list_or_urls.txt | check_http
+```
+
+### Via the lib:
 
 ```ruby
 require 'check_http'
