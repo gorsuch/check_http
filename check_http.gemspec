@@ -1,0 +1,21 @@
+# -*- encoding: utf-8 -*-
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'check_http/version'
+
+Gem::Specification.new do |gem|
+  gem.name          = "check_http"
+  gem.version       = CheckHTTP::VERSION
+  gem.authors       = ["Michael Gorsuch"]
+  gem.email         = ["michael.gorsuch@gmail.com"]
+  gem.description   = %q{a simple interface to gather curl stats on an HTTP resource}
+  gem.summary       = gem.description
+  gem.homepage      = "https://github.com/gorsuch/check_http"
+
+  gem.files         = `git ls-files`.split($/)
+  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
+  gem.require_paths = ["lib"]
+  gem.add_dependency('ethon')
+  gem.add_dependency('kv')
+end
