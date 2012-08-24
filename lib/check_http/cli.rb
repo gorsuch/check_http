@@ -1,4 +1,4 @@
-$stdout.sync = true
+STDOUT.sync = true
 
 module CheckHTTP
   class CLI
