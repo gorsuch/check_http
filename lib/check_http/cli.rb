@@ -1,3 +1,5 @@
+$stdout.sync = true
+
 module CheckHTTP
   class CLI
     def perform(url)
