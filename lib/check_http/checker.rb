@@ -5,15 +5,11 @@ module CheckHTTP
     end
 
     def check(url)
-      ethon.reset
+      ethon = Ethon::Easy.new
       ethon.url = url
       ethon.prepare
       ethon.perform
       ethon.to_hash.reject { |k,v| blacklist.include?(k) }.merge(:url => url)
-    end
-
-    def ethon
-      @ethon ||= Ethon::Easy.new
     end
   end
 end
