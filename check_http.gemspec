@@ -18,5 +18,6 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.add_dependency('ethon')
   gem.add_dependency('kv', '0.0.4')
+  gem.add_development_dependency('rake')
   gem.add_development_dependency('rspec')
 end
