@@ -2,6 +2,8 @@
 
 A simple interface to gather curl stats on a given HTTP interface.
 
+[![Build Status](https://secure.travis-ci.org/gorsuch/check_http.png)](http://travis-ci.org/gorsuch/check_http)
+
 ## Installation
 
 Add this line to your application's Gemfile:
