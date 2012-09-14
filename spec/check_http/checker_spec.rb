@@ -32,4 +32,8 @@ describe CheckHTTP::Checker do
     checker.blacklist = [:foo]
     checker.clean({:foo => 1, :baz => 2}).should eq({:baz => 2})
   end
+
+  it 'should set the default blacklist upon initialization' do
+    checker.blacklist.should eq(checker.default_blacklist)
+  end
 end
