@@ -33,6 +33,13 @@ You can also stream urls into it:
 $ cat list_of_urls.txt | check_http
 ```
 
+There is also support for an __advanced input mode__:
+
+```bash
+$ echo url=http://google.com location=my_house | check_http
+# results will include the location key and any other keys you place in the input stream
+```
+
 ### Via the lib:
 
 ```ruby
