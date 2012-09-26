@@ -13,7 +13,7 @@ module CheckHTTP
     @checker ||= Checker.new
   end
 
-  def check(url)
-    checker.check(url)
+  def check(url,opts={})
+    checker.check(url,opts)
   end
 end

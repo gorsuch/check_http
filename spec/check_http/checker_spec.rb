@@ -17,11 +17,6 @@ describe CheckHTTP::Checker do
     checker.sample(url)
   end
 
-  it 'should return sampled results with url merged in' do
-    checker.stub(:sample).with(url) { mock_result }
-    checker.check(url).should eq(mock_result.merge(:url => url))
-  end
-
   it 'should clean sampled results before returning' do
     checker.stub(:sample).with(url) { mock_result }
     checker.should_receive(:clean).with(mock_result) { mock_result }
@@ -37,8 +32,8 @@ describe CheckHTTP::Checker do
     checker.blacklist.should eq(checker.default_blacklist)
   end
 
-  it 'should merge in additional values provided on input' do
+ it 'should merge in additional values provided on input' do
     checker.stub(:sample).with(url) { mock_result }
-    checker.check(url, {'check_id' => 1}).should eq(mock_result.merge({:url => url, 'check_id' => 1}))
+    checker.check(url, {'check_id' => 1}).should eq(mock_result.merge({'check_id' => 1}))
   end
 end

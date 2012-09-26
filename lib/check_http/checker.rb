@@ -7,11 +7,11 @@ module CheckHTTP
     end
 
     def default_blacklist
-      [:response_header, :response_body, :httpauth_avail, :starttransfer_time, :appconnect_time, :pretransfer_time]  
+      [:response_headers, :response_body, :httpauth_avail, :starttransfer_time, :appconnect_time, :pretransfer_time]  
     end
 
     def check(url, opts={})
-      clean(sample(url)).merge(:url => url).merge(opts)
+      clean(sample(url)).merge(opts)
     end
 
     def clean(result)

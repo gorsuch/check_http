@@ -16,7 +16,7 @@ Gem::Specification.new do |gem|
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
-  gem.add_dependency('ethon')
+  gem.add_dependency('ethon', '0.5.0')
   gem.add_dependency('kv', '0.0.4')
   gem.add_development_dependency('rake')
   gem.add_development_dependency('rspec')
