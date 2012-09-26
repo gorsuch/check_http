@@ -10,8 +10,8 @@ module CheckHTTP
       [:response_header, :response_body, :httpauth_avail, :starttransfer_time, :appconnect_time, :pretransfer_time]  
     end
 
-    def check(url)
-      clean(sample(url)).merge(:url => url)
+    def check(url, opts={})
+      clean(sample(url)).merge(:url => url).merge(opts)
     end
 
     def clean(result)

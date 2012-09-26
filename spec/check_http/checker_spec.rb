@@ -36,4 +36,9 @@ describe CheckHTTP::Checker do
   it 'should set the default blacklist upon initialization' do
     checker.blacklist.should eq(checker.default_blacklist)
   end
+
+  it 'should merge in additional values provided on input' do
+    checker.stub(:sample).with(url) { mock_result }
+    checker.check(url, {'check_id' => 1}).should eq(mock_result.merge({:url => url, 'check_id' => 1}))
+  end
 end
