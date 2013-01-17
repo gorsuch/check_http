@@ -1,6 +1,6 @@
 # CheckHTTP
 
-A simple interface to gather curl stats on a given HTTP interface.
+A simple sensor for gather curl stats against an HTTP endpoint.
 
 [![Build Status](https://secure.travis-ci.org/gorsuch/check_http.png)](http://travis-ci.org/gorsuch/check_http)
 
